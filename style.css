@@ -5,5 +5,5 @@
   font-size:15px;
 }
 .bt {
-  position:relative;
+  position:static;
   transform:scale(3,3);

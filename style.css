@@ -5,6 +5,5 @@
   font-size:15px;
 }
 .bt {
-  transform: translate(50px,20px);
   transform:scale(2,2);
 }

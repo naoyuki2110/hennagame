@@ -1,7 +1,8 @@
-button {
-  transform:scale(3, 3);
+.titletext {
+  font-size:20px;
 }
-p {
-  font-size:30px;
-  font-family:"arial";
+.sectext {
+  font-size:15px;
 }
+.bt {
+  transform:scale(3,3);

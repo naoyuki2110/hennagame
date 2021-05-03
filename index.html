@@ -5,13 +5,13 @@
   <body>
     <p class="titletext">10秒ぴったりで止めろ！</p>
     <p class="sectext">あなたはx.xxx秒でクリックしました。</p>
-    <button class="bt" onclick="clickevent()">START</button>
+    <button class="bt" onclick="clickevent()" id="btc">START</button>
   </body>
 </html>
 <script>
 function clickevent(){
     alert('くりっくてすと');
-  　　document.getElementById("str").textContent="<button class="bt" onclick="clickevent()">クリック！</button>";
+  　　document.getElementById("btc").textContent="<button class="bt" onclick="clickevent()">クリック！</button>";
 }
 </script>
 <style>

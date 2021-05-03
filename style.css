@@ -1,3 +1,6 @@
 button {
-  transform:scale(3, 3)
+  transform:scale(3, 3);
+}
+p {
+  font-size:15px;
 }

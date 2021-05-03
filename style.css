@@ -4,3 +4,6 @@
 .sectext {
   font-size:15px;
 }
+.bt {
+  transform:translate(20px,0px);
+}

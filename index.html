@@ -10,7 +10,14 @@
 </html>
 <script>
 function clickevent(){
+  count = true;
+  if count == true {
   　　document.getElementById("btc").innerHTML="クリック！";
+     count = false;
+  }
+  else {
+    document.getElementById("btc").innerHTML="START";
+  }
 }
 </script>
 <style>

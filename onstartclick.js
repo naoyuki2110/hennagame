@@ -1,0 +1,3 @@
+function clickevent() {
+  alert("クリックテスト");
+}

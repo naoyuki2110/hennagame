@@ -1,36 +1,55 @@
 <html>
-  <head>
-    <title>変なゲーム</title>
-  </head>
-  <body>
-    <p class="titletext">10秒ぴったりで止めろ！</p>
-    <div id="timer">00:00:000</div>
-    <p class="sectext">あなたはx.xxx秒でクリックしました。</p>
-    <div id="btc"><button class="bt" onclick="clickevent()">START</button></div>
-  </body>
+
+<head>
+  <title>変なゲーム</title>
+</head>
+
+<body>
+  <p class="titletext">10秒ぴったりで止めろ！</p>
+  <div id="timer">00:00:000</div>
+  <p class="sectext">あなたはx.xxx秒でクリックしました。</p>
+  <div id="btc"><button class="bt" onclick="clickevent()">START</button></div>
+</body>
+
 </html>
 <script>
-function clickevent(){
-  document.getElementById("btc").innerHTML="<button class=&quot;bt&quot; onclick=&quot;clickevent2()&quot;>クリック！</button>";
-}
-function clickevent2(){
-  document.getElementById("btc").innerHTML="<button class=&quot;bt&quot; onclick=&quot;clickevent()&quot;>START</button>";
-}
+  var gameBool = false;
+  var curtime = 0;
+  function clickevent() {
+    gameBool = !gameBool;
+    if (gameBool) {
+      document.getElementById("btc").innerHTML = "<button class=&quot;bt&quot; onclick=clickevent()>クリック！</button>";
+      setInterval("timeCount()", 5);
+    }
+    else {
+      document.getElementById("btc").innerHTML = "<button class=&quot;bt&quot; onclick=clickevent()>START</button>";
+    }
+  }
+  function clickevent2() {
+    document.getElementById("btc").innerHTML = "<button class=&quot;bt&quot; onclick=&quot;clickevent()&quot;>START</button>";
+  }
+  function timeCount() {
+    curtime += 5;
+    document.getElementById("timer").innerText = `${Math.floor(curtime / 1000 / 60)}:${Math.floor(curtime / 1000)}`;
+  }
 </script>
 <style>
-body {
-  width:700px;
-  margin-right: auto;
-  margin-left : auto;
+  body {
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
   }
-.titletext {
-  font-size:20px;
-}
-.sectext {
-  font-size:15px;
-}
-.bt {
-  transform:translateX(80px);
-  transform:scale(1,1);
-}
+
+  .titletext {
+    font-size: 20px;
+  }
+
+  .sectext {
+    font-size: 15px;
+  }
+
+  .bt {
+    transform: translateX(80px);
+    transform: scale(1, 1);
+  }
 </style>
